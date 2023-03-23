@@ -43,7 +43,7 @@ n %= 10;
 m05 = n / 5;
 n %= 5;
 
-m01 = n;
+m01 = n; 
 
 printf("%d nota(s) de R$ 100.00\n", n100);
 printf("%f nota(s) de R$ 50.00\n", n50);

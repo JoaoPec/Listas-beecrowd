@@ -1,63 +1,66 @@
 #include <stdio.h>
 
 int main() {
+double valor;
+int notas100, notas50, notas20, notas10, notas5, notas2;
+int moedas1, moedas50, moedas25, moedas10, moedas5, moedas1c;
 
-int n,n100,n50,n20,n10,n5,n2; 
-float m1,m05,m10,m25,m50,m01,nt;
+scanf("%lf", &valor);
 
+    // cálculo das notas
+notas100 = valor / 100;
+valor = valor - notas100 * 100;
 
-scanf("%d",&n);
+notas50 = valor / 50;
+valor = valor - notas50 * 50;
 
-printf("%d\n",n);
+notas20 = valor / 20;
+valor = valor - notas20 * 20;
 
-n100 = n / 100;
-n %= 100;
+notas10 = valor / 10;
+valor = valor - notas10 * 10;
 
-n50 = n / 50;
-n %= 50; 
+notas5 = valor / 5;
+valor = valor - notas5 * 5;
 
-n20 = n/20;
-n%= 20; 
+notas2 = valor / 2;
+valor = valor - notas2 * 2;
 
-n10 = n/10;
-n %= 10;
+    // cálculo das moedas
+moedas1 = valor / 1;
+valor = valor - moedas1 * 1;
 
-n5 = n/5;
-n %= 5;
+moedas50 = valor / 0.5;
+valor = valor - moedas50 * 0.5;
 
-n2 = n/2;
-n %= 2;
+moedas25 = valor / 0.25;
+valor = valor - moedas25 * 0.25;
 
-m1 = n / 100;
-n %= 100;
+moedas10 = valor / 0.1;
+valor = valor - moedas10 * 0.1;
 
-m50 = n / 50;
-n %= 50;
+moedas5 = valor / 0.05;
+valor = valor - moedas5 * 0.05;
 
-m25 = n / 25;
-n %= 25;
+    moedas1c = valor / 0.01;
 
-m10 = n / 10;
-n %= 10;
+    // impressão do resultado
+printf("NOTAS:\n");
+printf("%d nota(s) de R$ 100.00\n", notas100);
+printf("%d nota(s) de R$ 50.00\n", notas50);
+printf("%d nota(s) de R$ 20.00\n", notas20);
+printf("%d nota(s) de R$ 10.00\n", notas10);
+printf("%d nota(s) de R$ 5.00\n", notas5);
+printf("%d nota(s) de R$ 2.00\n", notas2);
 
-m05 = n / 5;
-n %= 5;
+printf("MOEDAS:\n");
+printf("%d moeda(s) de R$ 1.00\n", moedas1);
+printf("%d moeda(s) de R$ 0.50\n", moedas50);
+printf("%d moeda(s) de R$ 0.25\n", moedas25);
+printf("%d moeda(s) de R$ 0.10\n", moedas10);
+printf("%d moeda(s) de R$ 0.05\n", moedas5);
+printf("%d moeda(s) de R$ 0.01\n", moedas1c);
 
-m01 = n; 
-
-printf("%d nota(s) de R$ 100.00\n", n100);
-printf("%f nota(s) de R$ 50.00\n", n50);
-printf("%f nota(s) de R$ 20.00\n", n20);
-printf("%f nota(s) de R$ 10.00\n", n10);
-printf("%f nota(s) de R$ 5.00\n", n5);
-printf("%f nota(s) de R$ 2.00\n", n2);
-
-
-printf("%f moeda(s) de R$ 1.00\n", m1);
-printf("%f moeda(s) de R$ 0.50\n", m50);
-printf("%f moeda(s) de R$ 0.25\n", m25);
-printf("%f moeda(s) de R$ 0,10\n", m10);
-printf("%f moeda(s) de R$ 0,05\n", m05);
-printf("%f moeda(s) de R$ 0,01\n", m01);
+return 0;
 
 }
